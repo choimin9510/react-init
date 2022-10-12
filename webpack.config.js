@@ -12,6 +12,10 @@ module.exports = (webpackEnv, webpackArgv) => ({
   {
     devtool: 'source-map'
   } : {},
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css', '.scss'],
+    modules: ['src', 'node_modules']
+  },
   devServer: {
     port: 3000,
     liveReload: true,

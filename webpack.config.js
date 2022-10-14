@@ -8,7 +8,7 @@ module.exports = (webpackEnv, webpackArgv) => ({
   output: {
     path: path.join(__dirname, '/build'),
     filename: 'shopto.js',
-  },
+  },  
   ...webpackArgv.mode === 'development' ? 
   {
     devtool: 'source-map'
@@ -45,9 +45,7 @@ module.exports = (webpackEnv, webpackArgv) => ({
   },
   
   plugins: [
-    new Dotenv({
-      path: `.env.${webpackArgv.mode}`,
-    }),
+    new Dotenv({path: `.env.${webpackArgv.mode}`}),
     new HtmlWebpackPlugin({ template: './public/index.html' })
   ],
   optimization: {

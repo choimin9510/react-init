@@ -8,6 +8,7 @@ const axiosConfig = {
   headers: {},
 };
 
+console.log("=====", process.env);
 const http = axios.create(axiosConfig);
 
 // http.interceptors.request.use((config) => {

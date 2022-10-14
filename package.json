@@ -4,9 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --mode development",
+    "start": "webpack serve --mode development --env development",
     "build": "webpack --mode production",
-    "local-dev": "env-cmd -f .env.local-dev react-scripts start"
+    "start test": "webpack serve --mode test --env test"
   },
   "keywords": [],
   "author": "",

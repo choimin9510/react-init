@@ -45,7 +45,7 @@ module.exports = (webpackEnv, webpackArgv) => ({
     ],
   },
 
-  plugins: [new Dotenv({ path: `.env.${webpackArgv.env}` }), new HtmlWebpackPlugin({ template: "./public/index.html" })],
+  plugins: [new Dotenv({ path: `.env.${webpackArgv.nodeEnv}` }), new HtmlWebpackPlugin({ template: "./public/index.html" })],
   optimization: {
     minimizer: [
       new TerserPlugin({

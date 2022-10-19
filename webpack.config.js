@@ -7,7 +7,7 @@ module.exports = (webpackEnv, webpackArgv) => ({
   mode: webpackArgv.mode,
   output: {
     path: path.join(__dirname, "/build"),
-    filename: "shopto.js",
+    filename: "devblog.js",
   },
   ...(webpackArgv.mode === "development"
     ? {

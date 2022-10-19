@@ -4,6 +4,8 @@ import { userActions } from "./store/user";
 
 import { publicProducts } from "../src/service/common";
 
+import { Routes } from "./route/Routes";
+
 function App() {
   const dispatch = useDispatch();
   const { id: userId, name: userName } = useSelector((state) => ({ id: state.user.id, name: state.user.name }), shallowEqual);
@@ -22,6 +24,7 @@ function App() {
   return (
     <div>
       <h1>Hello React</h1>
+      <Routes />
       <div>
         {userId} - {userName}
       </div>

@@ -22,6 +22,7 @@ module.exports = (webpackEnv, webpackArgv) => ({
     port: 3000,
     liveReload: true,
     host: "localhost",
+    historyApiFallback: true,
     open: true,
     client: {
       overlay: true,

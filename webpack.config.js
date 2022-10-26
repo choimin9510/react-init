@@ -7,7 +7,7 @@ module.exports = (webpackEnv, webpackArgv) => ({
   mode: webpackArgv.mode,
   output: {
     path: path.join(__dirname, "/build"),
-    filename: "devblog.js",
+    filename: webpackArgv.mode === "production" ? "[name].[contenthash:8].chunk.js" : "devblog.js",
   },
   ...(webpackArgv.mode === "development"
     ? {
